@@ -18,4 +18,13 @@
 - ymerged merges ytrain and ytest 
 - subjmerged merges subjtrain and subjtest 
 ### Transformations on the merged data set
-- The Mean ans Standard deviations were extracted from each measurement
+- The Mean and Standard deviations were extracted from each measurement. The grep command was used to get the column number of the features which contains "std" or "mean". The data were taken from features.txt. The resulting data set that has the features is MeanStd.
+- set up column names on the resulting dataset.
+### Uses descriptive activity names to name the activities in the data set
+- Activity labels were read from activity_labels.txt and stored to ActivityName
+### Appropriately labels the data set with descriptive variable names.
+- labeled "Activity" and "Subjects" to the columns.
+- used cbind() to create one data set whose filenmane is MyData.
+### Tidied the data set
+- loaded library(dplyr) to tidy the data using group_by and summarize functions.
+- used write.table of the tidied data with the filename TidyData.txt

@@ -10,7 +10,7 @@ ymerged<- rbind(ytrain,ytest)
 subjmerged<- rbind(subjtrain,subjtest)
 
 # Extracting Measurements
-features <- read.table("/dataset/features.txt", header = TRUE)
+features <- read.table("features.txt", header = TRUE)
 
 # Mean and Standard Deviation
 MeanStd <- grep("std|mean\\(\\)",features$V2)
@@ -18,7 +18,7 @@ ExtractedX<- xmerged[,MeanStd]
 names(ExtractedX) <-features[MeanStd,2]
 
 # Activities
-ActivityName <- read.table("/dataset/activity_labels.txt",header = TRUE)
+ActivityName <- read.table("activity_labels.txt",header = TRUE)
 ymerged[,1] <- ActivityName[ymerged[,1],2]
 names(ymerged) <- "Activity"
 
